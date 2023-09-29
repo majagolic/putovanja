@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $darkblue_background;
+    padding: 1em 2em;
+    .logo{
+        display: flex;
+        color: white;
+        width: 10%;
+        
+        img{
+            width: 25%;
+        }
+        p{
+            font-size: 2em;
+        }
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-self: end;
+        
+        
+        li{
+            
+            a{
+                color: white;
+                text-decoration: none;
+                margin-left: 2em;
+            }
+        }
+        li:hover{
+            background-color: $yellow_background;
+            a{
+            color: $darkblue_background;
+            }
+        }
+    }
+    .login{
+        background-color: white;
+        border-radius: 15px;
+        padding: 5px;
+        a{
+            color: $darkblue_background;
+            text-decoration: none;
+        }
+    }
+}
+header{
+    background-image: url(../slike/background.jpeg);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20%;
+    
+    form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        width: 48%;
+        padding: 0.2em;
+        border-radius: 30px;
+        align-items: center;
+        div{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 1%;
+            align-items: center;
+            input{
+                border-radius: 30px;
+                display: block;
+                color: black;
+                padding: 0.5em;
+                border: 1px solid gray;
+                
+            }
+        }
+
+    
+        button{
+            width: 50px;
+            height: 50px;
+            background-color: $red_background;
+            color: white;
+            border-radius: 50px;
+            border: none;
+        }
+    }
+}
+
+main{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    .slike{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 70vh;
+        width: 80%;
+        justify-content: space-around;
+        margin-top: 2%;
+        
+
+        .slika{
+            width: 30%;
+            height: 80%;
+            background-color: white;
+            box-shadow: $blue_background 2px 3px 3px 2px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 1%;
+            transition: transform 1s;
+            
+        
+            img{
+                height: 90%;
+                width: 90%;
+                transition: transform 2s;
+                }
+             }
+             img:hover{
+                transform: scale(1.1) rotate3d(0, 1, 0, 3.142rad);
+             }
+         }
+    }
+
+    footer{
+        background-color: $darkblue_background;
+        display: flex;
+        flex-direction: row;
+        height: 40vh;
+        justify-content: space-evenly;
+        padding-top: 2%;
+
+        .tekst{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           
+
+        .podaci{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            margin-right: 20px;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            p{
+                font-size: large ;
+            }
+        }
+    }
+        .mapa{
+            iframe{
+                height: 90%;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width:950px){
+
+        header{
+            form{
+                width: 90%;
+            }
+        }
+
+        main{
+            height: 125vh;
+            .slike{
+                .slika{
+                    width: 40%;
+                    margin-top: 10px;
+                }
+            }
+        }
+        footer{
+            height: 60vh;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            .mapa{
+                width: 60%;
+                height: 50%;
+            }
+        }
+    }
+
+    @media screen and (max-width:650px){
+
+        nav{
+            position: relative;
+            height: auto;
+
+            .logo{
+                img{
+                    width: 20px;
+                }
+            }
+            .login{
+                position: absolute;
+                margin-left: 60%;
+                margin-bottom: 60%;
+            }
+
+            ul {
+                width: 100%;
+                text-align: center;
+                margin-top: 2em;
+                li {
+                    width: 100%;
+                    margin: 1.5em;
+                }
+            }
+        }
+
+        header{
+            form{
+                div{
+                    width: 90%;
+                    input{
+                        width: 90%;
+                    }
+                }
+                button{
+                    width: 81%;
+                    margin-left: 25px;
+                    height: 2.8em;
+                }
+            }
+        }
+        main{
+            height: 190vh;
+            .text{
+                text-align: center;
+            }
+            .slike{
+                .slika{
+                    width: 90%;
+                }
+            }
+        }
+    }

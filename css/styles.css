@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Luxurious Roman", "cursive";
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0e1538;
+  padding: 1em 2em;
+}
+nav .logo {
+  display: flex;
+  color: white;
+  width: 10%;
+}
+nav .logo img {
+  width: 25%;
+}
+nav .logo p {
+  font-size: 2em;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-self: end;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2em;
+}
+nav ul li:hover {
+  background-color: #f2f2dd;
+}
+nav ul li:hover a {
+  color: #0e1538;
+}
+nav .login {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+}
+nav .login a {
+  color: #0e1538;
+  text-decoration: none;
+}
+
+header {
+  background-image: url(../slike/background.jpeg);
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20%;
+}
+header form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  width: 48%;
+  padding: 0.2em;
+  border-radius: 30px;
+  align-items: center;
+}
+header form div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1%;
+  align-items: center;
+}
+header form div input {
+  border-radius: 30px;
+  display: block;
+  color: black;
+  padding: 0.5em;
+  border: 1px solid gray;
+}
+header form button {
+  width: 50px;
+  height: 50px;
+  background-color: #fb5b5b;
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main .slike {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 70vh;
+  width: 80%;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+main .slike .slika {
+  width: 30%;
+  height: 80%;
+  background-color: white;
+  box-shadow: #7079f7 2px 3px 3px 2px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+  transition: transform 1s;
+}
+main .slike .slika img {
+  height: 90%;
+  width: 90%;
+  transition: transform 2s;
+}
+main .slike img:hover {
+  transform: scale(1.1) rotate3d(0, 1, 0, 3.142rad);
+}
+
+footer {
+  background-color: #0e1538;
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+  justify-content: space-evenly;
+  padding-top: 2%;
+}
+footer .tekst {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .tekst .podaci {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-right: 20px;
+}
+footer .tekst .podaci a {
+  text-decoration: none;
+  color: white;
+}
+footer .tekst .podaci p {
+  font-size: large;
+}
+footer .mapa iframe {
+  height: 90%;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  header form {
+    width: 90%;
+  }
+  main {
+    height: 125vh;
+  }
+  main .slike .slika {
+    width: 40%;
+    margin-top: 10px;
+  }
+  footer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  footer .mapa {
+    width: 60%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav {
+    position: relative;
+    height: auto;
+  }
+  nav .logo img {
+    width: 20px;
+  }
+  nav .login {
+    position: absolute;
+    margin-left: 60%;
+    margin-bottom: 60%;
+  }
+  nav ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 1.5em;
+  }
+  header form div {
+    width: 90%;
+  }
+  header form div input {
+    width: 90%;
+  }
+  header form button {
+    width: 81%;
+    margin-left: 25px;
+    height: 2.8em;
+  }
+  main {
+    height: 190vh;
+  }
+  main .text {
+    text-align: center;
+  }
+  main .slike .slika {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
